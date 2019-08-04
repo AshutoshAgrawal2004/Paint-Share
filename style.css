@@ -7,11 +7,13 @@ HEX: #e06377
 HEX: #c83349 */
 body {
   text-align: center;
-  width: 100vw;
+  width: 95vw;
   background-color: #e06377;
   color: #f9d5e5;
   font-family: 'Gloria Hallelujah', cursive;
 }
+
+
 
 button {
   outline: none;
@@ -109,29 +111,20 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 .oneimage {
-  /* border: 5px solid #f9d5e5;
-  margin: 5px;
-  padding: 5px;
-  border-radius: 40px; */
-}
-
-.imgcontainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  border: 5px solid #f9d5e5;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 40px;
 }
 
 .painter, .imgtitle {
   font-family: 'Courgette', cursive;
-  font-size: 10px;
-  width: 50px;
-  overflow: hidden;
-  margin: 5px;
+  font-size: 25px;
+  margin: 10px;
 }
 
 .loadedimg {
-  height: 100px;
+  height: 250px;
   border: 5px double #c83349;
   border-radius: 20px;
 }
