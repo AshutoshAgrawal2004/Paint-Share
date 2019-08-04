@@ -70,12 +70,12 @@ function showImages() {
       let json = doc.data();
       let imghtml = `
       <div class="oneimage">
-        <!--  <div class="imgtitle">${json.title}</div>-->
+       <div class="imgtitle">${json.title}</div>
         <img src="${json.imgurl}" alt="Failed to load" class="loadedimg">
-        <!--<div class="painter">${json.creator}</div>
+        <div class="painter">${json.creator}</div>
         <button class="likebtn far fa-thumbs-up" id="${json.docid}"></button>
          <span id="nooflikes">${json.likes}</span>
-         <button class="delbtn fas fa-trash" id="${json.docid}"></button>-->
+         
       </div>
       `
       imgcontainer.innerHTML += imghtml;
@@ -95,12 +95,7 @@ function showImages() {
         e.target.nextElementSibling.textContent = newnooflikes;
       })
     });
-    let delbtns = $('.delbtn');
-    delbtns.one('click', e => {
-      console.log('deleting');
-      let docrefid = e.target.id;
-      imgcollection.doc(docrefid).delete().then(() => console.log('Document deleted'));
-    })
+   
     makesnack('Ready!')
   }).catch(e => {
     makesnack('failed retrying now.....');
