@@ -63,7 +63,7 @@ function saveImage() {
 
 function showImages() {
   makesnack('loading...');
-  imgcollection.orderBy(filterbasis, 'desc').get().then((querySnapshot) => {
+  imgcollection.orderBy(filterbasis, 'desc').limit(10).get().then((querySnapshot) => {
     while(imgcontainer.firstChild) imgcontainer.removeChild(imgcontainer.firstChild);
     querySnapshot.forEach((doc) => {
       // console.log(`${doc.id} => ${doc.data()}`);
